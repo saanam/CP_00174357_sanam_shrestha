@@ -27,3 +27,6 @@
 </div>
 </div>
 <!-- form tag closing-->
+<div class="background">
+
+</div>

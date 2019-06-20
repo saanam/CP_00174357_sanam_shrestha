@@ -45,3 +45,6 @@
 <?php echo form_close();?>
 <!--form tag closing-->
 
+<div class="background">
+
+</div>

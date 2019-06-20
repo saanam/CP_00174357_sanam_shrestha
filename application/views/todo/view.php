@@ -7,3 +7,7 @@
     </li>
 <?php endforeach; ?>
 </ul>
+
+<div class="background">
+
+</div>
