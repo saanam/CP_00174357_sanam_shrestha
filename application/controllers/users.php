@@ -215,4 +215,16 @@
            $this->load->view('includes/footer');
 
         }
+        
+        public function count_note()
+        {
+            //check login
+            if(!$this->session->userdata('logged_in'))
+            {
+                redirect('users/login');
+            }
+
+            $data['count'] = $this->note_model->count_note();
+            $this->load->view('users/profile', $data);
+        }  
     }

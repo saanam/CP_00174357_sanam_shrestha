@@ -108,4 +108,13 @@
                 $this->db->where('userid', $id);
                 return $this->db->update('users', $data); 
         }
+
+        public function count_note()
+        {
+            $id= array(
+                'user_id' => $this->session->userdata('user_id'));
+
+            $query = $this->db->query('SELECT * FROM notes where user_id ='.$id);
+            return $query->num_rows();
+        }
     }

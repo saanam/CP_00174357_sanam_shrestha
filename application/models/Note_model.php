@@ -86,11 +86,6 @@
                 return $query->result_array();
             }
 
-            public function get_search() 
-            {
-                $match = $this->input->post('search');
-                $this->db->like(notename,$match);
-                $query = $this->db->get(notes);
-                return $query->result();
-            }
+
+
     }
