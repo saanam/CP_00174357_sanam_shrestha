@@ -2,7 +2,7 @@
     <div class="card-body">
        <h2 class="text"> <?= $title; ?> </h2>
         <br />
-            <form method="POST" action="<?php echo base_url(); ?>export_csv/export">
+
             <div class="panel panel-default">
                 <div class="panel-heading">
                 </div>
@@ -34,7 +34,4 @@
     </div>
 </div>
 
-<div class="background">
-
-</div>
   

@@ -15,7 +15,7 @@
                 <div class="col-sm-4">
 
                 </div>
-</div>
+            </div>
 
                 <div class="note-body ">
                         <?php echo $note['notedetail']; ?>
