@@ -120,8 +120,6 @@
 
         public function count_rows($id)
         {
-
-
             $this->db->count_all_results('notes');  // Produces an integer, like 25
             $this->db->where('user_id', ($id));
             $this->db->from('notes');
@@ -132,8 +130,6 @@
 
         public function count_ctasks($id)
         {
-
-
             $this->db->count_all_results('todo');  // Produces an integer, like 25
             $this->db->where('user_id', ($id));
             $this->db->from('todo');
