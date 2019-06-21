@@ -47,10 +47,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-              <a class="nav-link" href="<?php echo base_url(); ?>">Home <span class="sr-only">(current)</span></a> 
-          </li>
-
+        
             <!-- checks in session data for displaying these part -->
             <?php if(!$this->session->userdata('logged_in')) : ?> 
               <a class="nav-link" href="<?php echo base_url(); ?>users/login">Login<span class="sr-only">(current)</span></a> 

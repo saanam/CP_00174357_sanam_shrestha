@@ -117,4 +117,28 @@
             $query = $this->db->query('SELECT * FROM notes where user_id ='.$id);
             return $query->num_rows();
         }
+
+        public function count_rows($id)
+        {
+
+
+            $this->db->count_all_results('notes');  // Produces an integer, like 25
+            $this->db->where('user_id', ($id));
+            $this->db->from('notes');
+            return $this->db->count_all_results();;
+
+
+        }
+
+        public function count_ctasks($id)
+        {
+
+
+            $this->db->count_all_results('todo');  // Produces an integer, like 25
+            $this->db->where('user_id', ($id));
+            $this->db->from('todo');
+            return $this->db->count_all_results();;
+
+
+        }
     }
