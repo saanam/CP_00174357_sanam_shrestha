@@ -58,11 +58,11 @@
             <!-- checks in session data for displaying these part-->
             <!-- start of if condition-->
             <?php if($this->session->userdata('logged_in')) : ?>
-                    <a class="nav-link" href="<?php echo base_url(); ?>todo">Todo<span class="sr-only">(current)</span></a> 
-                    <a class="nav-link" href="<?php echo base_url(); ?>notes">Notes<span class="sr-only">(current)</span></a> 
+                    <a class="nav-link" href="<?php echo base_url(); ?>todo">Todo<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?php echo base_url(); ?>notebooks">Notebooks<span class="sr-only">(current)</span></a> 
-                    <a class="nav-link" href="<?php echo base_url(); ?>notes/add">Add Note<span class="sr-only">(current)</span></a> 
-                    <a class="nav-link" href="<?php echo base_url(); ?>notebooks/add">Add Notebook<span class="sr-only">(current)</span></a> 
+                    <a class="nav-link" href="<?php echo base_url(); ?>notes">Notes<span class="sr-only">(current)</span></a> 
+                    <a class="nav-link" href="<?php echo base_url(); ?>notebooks/add">Add Notebook<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>notes/add">Add Note<span class="sr-only">(current)</span></a>                    
                     <a class="nav-link" href="<?php echo base_url(); ?>profile">Profile<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout<span class="sr-only">(current)</span></a>
                       <form class="form-inline my-2 my-lg-0" action="<?php echo base_url(); ?>notes/note_search">

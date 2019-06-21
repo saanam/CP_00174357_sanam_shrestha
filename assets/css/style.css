@@ -10,13 +10,10 @@
 
 }
 
-
-
 html, body {
 
     height: auto ;
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,12 +28,14 @@ html, body {
     padding-top: 70%;
 }
 
-.notebook{
+.notebook
+{
     background: rgba(255, 192, 203, 0.062);
 
 }
 
-.todo{
+.todo
+{
     background: rgba(255, 192, 203, 0.062);
 
 }
@@ -61,14 +60,16 @@ html, body {
     margin: 30px 0;
 }
 
-.pagination-links strong {
+.pagination-links strong 
+{
     padding: 8px 13px;
     margin: 5px;
     background: rgba(156, 98, 223, 0.233);
     border: 1px #cccccc solid;
 }
 
-a.pagination-link{
+a.pagination-link
+{
     padding: 8px 13px;
     margin: 5px;
     background: rgba(156, 98, 223, 0.233);
@@ -103,7 +104,8 @@ a.pagination-link{
 
 }
 
-.card {
+.card 
+{
     width: 70%;
     margin-left: 15%;
     margin-top: 3%;
@@ -114,7 +116,8 @@ a.pagination-link{
     background: #fff;
   }
   
-  .card-4 {
+  .card-4 
+  {
     background: #fff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -124,15 +127,23 @@ a.pagination-link{
     box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
   }
   
-  .card-4 .card-body {
+  .card-4 .card-body 
+  {
     padding: 57px 65px;
     padding-bottom: 65px;
   }
   
-  @media (max-width: 767px) {
-    .card-4 .card-body {
+  @media (max-width: 767px) 
+  {
+    .card-4 .card-body 
+    {
       padding: 50px 40px;
     }
+  }
+
+  .profile
+  {
+
   }
 
   
