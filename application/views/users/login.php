@@ -1,3 +1,5 @@
+<!--this is a page where users can log in-->
+<!--start of card section-->
 <div class="card card-4">
     <div class="card-body">
 <!--form tag openning-->
@@ -7,6 +9,7 @@
 
         </div>
        <div class='col-md-4'>
+       <!--this shows title of this page-->
             <h1 class=" text text-center"><?php echo $title; ?></h1>
             <div class="form-group">
                 <input type="text" name="email" class="form-control"

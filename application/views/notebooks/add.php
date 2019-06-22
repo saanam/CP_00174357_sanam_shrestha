@@ -1,8 +1,12 @@
+<!--this is add page of notebook where user can add new notebook -->
+<!--this part presents cart section-->
 <div class="card card-4">
     <div class="card-body">
+        <!--This part shows title of page-->
         <h2 class="text"><?= $title ;?></h2>
-
+        <!-- any errors encountred will be shown in validation_errors part-->
         <?php echo validation_errors(); ?>
+        <!--form_open_multipart is like <form> which supports image also -->
         <?php echo form_open_multipart('notebooks/add'); ?>
             <div class="form-group">
             <label class="text">Name</label>
@@ -11,9 +15,10 @@
             <button type="submit" class="btn btn-warning">Submit</button>
 
         </form>
+        <!--close form part-->
     </div>
 </div>  
-
+<!--end of card section-->
 <div class="background">
 
 </div>

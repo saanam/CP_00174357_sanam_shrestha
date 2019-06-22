@@ -4,7 +4,9 @@
         <script>
              CKEDITOR.replace( 'editor1' );
         </script>
+        <!--end of scrip-->
 
+        <!--script for pop up date picker in add date-->
         <script>
             $(document).ready(function(){
             var date_input=$('input[name="date"]'); //our date input has the name "date"
@@ -18,7 +20,7 @@
             date_input.datepicker(options);
             })
         </script>
-
-    </body>
-</html>
+        <!--end of scrip-->
+    </body> <!--end of body-->
+</html> <!--end of html/page-->
 

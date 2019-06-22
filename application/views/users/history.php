@@ -1,5 +1,8 @@
+<!--this is a page where login history is displayed of user-->
+<!--start of card section-->
 <div class="card card-4">
     <div class="card-body">
+    <!--this shows title of this page-->
         <h2 class="text"> <?= $title; ?> </h2>
         <br />
 
@@ -15,25 +18,22 @@
                         </tr>
                         <?php
                             foreach($login_history as $row)
-                            {
-                                
+                            {                              
                                 ?> 
                                 <tr>
                                     <td><?php echo $row->email; ?></td>
                                     <td><?php echo $row->logged_time; ?></td>
-                                </tr>
-                                    
+                                </tr>                                   
                                 <?php 
                             } 
                         ?>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
- 
+<!--start of card section-->
 <div class="background">
 
 </div>

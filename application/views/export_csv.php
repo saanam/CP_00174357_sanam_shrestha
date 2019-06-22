@@ -1,5 +1,8 @@
+<!--this is a page where user can export data-->
+<!--start of card section-->
 <div class="card card-4">
     <div class="card-body">
+        <!-- this is a title of current page-->
         <h3 class="text" align="center"> Export data of notes</h3>
             <br />
             <form method="POST" action="<?php echo base_url(); ?>export_csv/export">
@@ -18,6 +21,7 @@
                     <div class="panel-body">
                         <div class="table-responsive">
                             <table class="table table-bordered talble-striped">
+                            <!-- here all notes aree displayed of current user-->
                                 <tr>
                                     <th class="text">Note name</th>
                                     <th class="text">Description</th>
@@ -39,3 +43,4 @@
             </form>
     </div>
 </div>
+<!--end of card section-->

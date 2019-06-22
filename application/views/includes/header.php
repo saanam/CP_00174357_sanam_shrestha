@@ -1,17 +1,21 @@
+<!--defining this is html5-->
 <!DOCTYPE html>
 <html lang="en">
 
+<!--start of head section-->
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-      
+
+  <!--start of title section-->    
   <!-- Title Page-->
   <title>
     Welcome to Note & Todolist
   </title>
+  <!--end of title section-->
 
   <!--     Fonts and icons     -->
   <link href="assets/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -37,10 +41,13 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/style.css">
   
 </head>
+<!--end of head section-->
 
+<!--start of body section-->
 <body>
+<!--start of nav part-->
 <nav class="navbar navbar-expand-lg navbar-custom py-0">
-  <a class="navbar-brand" href="<?php echo base_url(); ?>">N&T</a>
+  <a class="navbar-brand" href="<?php echo base_url(); ?>">N&T</a> <!--echo base_url refers to localhost/cp-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -74,7 +81,9 @@
         </ul>
       </div>
 </nav>
+<!--end of nav part-->
 
+<!--start of container-fluid class-->
 <div class = "container-fluid">
 
   <!-- flash message-->

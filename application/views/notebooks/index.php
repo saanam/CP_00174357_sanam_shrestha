@@ -1,5 +1,8 @@
+<!-- this is index page of notebook where created notebooks are displayed-->
+<!--this part presents cart section-->
 <div class="card card-4">
     <div class="card-body">
+        <!--This part shows title of page-->
         <h2 class="text"><?= $title; ?></h2>
         <ul class="list-group">
             <?php foreach($notebooks as $notebook): ?>
@@ -15,7 +18,7 @@
         </ul>
     </div>
 </div>
-
+<!--end of card section-->
 <div class="background">
 
 </div>
