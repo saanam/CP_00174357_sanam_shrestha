@@ -1,3 +1,4 @@
+<!--this is a model of user-->
 <?php
     class User_model extends CI_Model
     {
@@ -15,6 +16,7 @@
             return $this->db->insert('users', $data);
 
         }
+
         //lOG USER IN
         public function login($email, $password)
         {
@@ -36,6 +38,7 @@
             }
         }
 
+        //function to get login log from database
         public function login_history_set()
         {
             $data = array(
@@ -46,6 +49,7 @@
             $this->db->insert('login_history', $data);
         }
 
+        //function to view login log
         public function login_history_view()
         {
             $data = array(
@@ -73,6 +77,7 @@
             }
         }
 
+        //function to get users
         public function get_user()
         {          
             $id= array(
@@ -82,8 +87,7 @@
             return $query->row_array();; //returns $query in result_array()
         }
 
-
-
+        // function to update user
         public function update_user()
         {
             $id = $this->session->userdata('user_id');
@@ -97,6 +101,7 @@
                 return $this->db->update('users', $data);           
         }
 
+        //function to change password of user
         public function change_password_m($enc_password)
         {
             $id = $this->session->userdata('user_id');
@@ -109,6 +114,7 @@
                 return $this->db->update('users', $data); 
         }
 
+        //function to count notes of that particular user
         public function count_note()
         {
             $id= array(
@@ -118,9 +124,10 @@
             return $query->num_rows();
         }
 
+        //function to count rows and return integer value
         public function count_rows($id)
         {
-            $this->db->count_all_results('notes');  // Produces an integer, like 25
+            $this->db->count_all_results('notes');  // Produces an integer
             $this->db->where('user_id', ($id));
             $this->db->from('notes');
             return $this->db->count_all_results();;
@@ -128,13 +135,12 @@
 
         }
 
+        //function to count tasks and reutrn integer value
         public function count_ctasks($id)
         {
-            $this->db->count_all_results('todo');  // Produces an integer, like 25
+            $this->db->count_all_results('todo');  // Produces an integer
             $this->db->where('user_id', ($id));
             $this->db->from('todo');
-            return $this->db->count_all_results();;
-
-
+            return $this->db->count_all_results();
         }
     }

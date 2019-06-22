@@ -1,3 +1,4 @@
+<!--this is a model of todo-->
 <?php
     class Todo_model extends CI_Model
     {
@@ -6,6 +7,7 @@
             $this->load->database();
         }
         
+        //function to add tasks
         public function add_todo()
         {
             $data = array(
@@ -17,6 +19,7 @@
             return $this->db->insert('todo', $data);
         }
         
+        //function to set tasks  from database
         public function get_todo()
         {
             $id= array(
@@ -32,7 +35,8 @@
                 return $query->result_array();
         
         }
-
+        
+        //function to get tasks
         public function get_todo_c()
         {
             $id= array(
@@ -58,6 +62,5 @@
         
                 $this->db->where('todoid', $todoid);
                 return $this->db->update('todo', $data);
-        
         }
     }

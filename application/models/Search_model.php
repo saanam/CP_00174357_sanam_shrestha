@@ -1,3 +1,4 @@
+<!--this is a model of search-->
 <?php
     class Search_model extends CI_Model
     {
@@ -8,6 +9,7 @@
             $this->load->database();
         }
 
+        //function to show notes 
         public function search_note($key)
         {
             $id= array(
