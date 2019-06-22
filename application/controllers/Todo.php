@@ -1,6 +1,8 @@
+<!-- this is a controller class of todo-->
 <?php 
     class Todo extends CI_Controller
     {
+        //function that calls model function when called
         public function index()
         {
             //check login
@@ -8,16 +10,15 @@
             {
                 redirect('users/login');
             }
-
             $data['title'] = "Your's today's perform list ";
             $data['todos'] = $this->todo_model->get_todo();
-
             //load following assets
             $this->load->view('includes/header');
             $this->load->view('todo/index', $data);
             $this->load->view('includes/footer');
-        }
+        } // end of function
 
+        //function that calls model function when called
         public function add()
         {
             //check login
@@ -42,8 +43,9 @@
 
                 redirect('todo');
             }           
-        }
+        } // end of function
 
+        //function that calls model function when called
         public function update($todoid)
         {
             //check login
@@ -56,8 +58,9 @@
              
             //redirect page to notes
             redirect('todo');
-        }
+        } //end of function
 
+        //function that calls model function when called
         public function view_c()
         {
             //check login
@@ -65,7 +68,6 @@
             {
                 redirect('users/login');
             }
-
             $data['title'] = "Completed tasks ";
             $data['todos'] = $this->todo_model->get_todo_c();
 
@@ -73,8 +75,5 @@
             $this->load->view('includes/header');
             $this->load->view('todo/view', $data);
             $this->load->view('includes/footer');            
-        }
-
-
-
-}
+        } // end of fucntion
+} // end of calss

@@ -1,6 +1,8 @@
+<!-- this is a controlelr class of profile-->
 <?php
     class Profile extends CI_Controller
     {
+        //function that calls model function when called
         public function index()
         {
             $this->load->model('user_model');
@@ -17,4 +19,4 @@
             $this->load->view('users/profile', $data);
             $this->load->view('includes/footer');
         }
-    }
+    } //end of function

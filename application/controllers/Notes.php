@@ -1,6 +1,8 @@
+<!-- thisi a controller class ofnotes-->
 <?php
     class Notes extends CI_Controller
     {
+        //function that calls model function when called
         public function index($offset = 0)
         {
             //pagination config
@@ -27,6 +29,7 @@
             
         }
 
+        //function that calls model function when called
         public function view($slug = NULL)
         {
             //check login
@@ -46,9 +49,9 @@
             $this->load->view('includes/header');
             $this->load->view('notes/view', $data);
             $this->load->view('includes/footer');
-
         }
 
+        //function that calls model function when called
         public function add()
         {
             //check login
@@ -56,11 +59,8 @@
             {
                 redirect('users/login');
             }
-
             $data['title'] = 'Add note';
-
             $data['notebooks'] = $this->note_model->get_notebooks();
-
             $this->form_validation->set_rules('notename', 'Notename', 'required');
             $this->form_validation->set_rules('notedetail', 'Notedetail', 'required');
             
@@ -99,7 +99,7 @@
                 redirect('notes');
                 
             }
-        }
+        } //end of the function
 
         public function delete($noteid)
         {
@@ -109,7 +109,6 @@
                 //redirect page to users/login
                  redirect('users/login');
             }
-
            $this->note_model->delete_note($noteid);
 
            //set message
@@ -117,8 +116,9 @@
 
            //redirect page to notes
            redirect('notes');
-        }
+        } //end of the function
 
+        //function that calls model function when called
         public function edit($slug)
         {
             //check login
@@ -135,7 +135,6 @@
                 //redirect page to users/login
                 redirect('users/login');
             }
-
             $data['notebooks'] = $this->note_model->get_notebooks();
 
             //show page 404 error if empty
@@ -143,15 +142,13 @@
             {
                 show_404();
             }
-
             $data['title'] = 'Edit Note';
-
             $this->load->view('includes/header');
             $this->load->view('notes/edit', $data);
             $this->load->view('includes/footer');
+        } // end of function
 
-        }
-
+        //function that calls model function when called
         public function update()
             {
                 //check login
@@ -165,8 +162,5 @@
                 $this->session->set_flashdata('note_updated', 'Note updated.');
 
                 redirect('notes');
-            }
-
-  
-        
-    }
+            } 
+    } // end of function

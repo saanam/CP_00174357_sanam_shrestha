@@ -1,3 +1,4 @@
+<!-- this is a controller class of user-->
 <?php
     class Users extends CI_Controller
     {
@@ -33,7 +34,7 @@
                 redirect('notes');
             }
             // end of if condition
-        }
+        } // end od function
 
         //login user
         public function login()
@@ -94,7 +95,7 @@
                 // end of nested if condition
                 // end of if condition
             }
-        }
+        } // end of function
 
         //Log user out
         public function logout()
@@ -109,7 +110,7 @@
 
             //redurect page to users/login
             redirect('users/login');
-        }
+        } // end of fucniton
 
         //check email exists or not
         public function check_email_exists($email)
@@ -123,8 +124,9 @@
             {
                 return FALSE;
             }
-        }
+        } // end of fucntion
 
+        //function that calls model function when called
         public function edit_profile()
         {
             //check login
@@ -134,14 +136,13 @@
                 redirect('users/login');
             }
             $data['user']= $this->user_model->get_user();
-
             $data['title'] = 'Edit Profile';
-
             $this->load->view('includes/header');
             $this->load->view('users/edit_profile', $data);
             $this->load->view('includes/footer');
-        }
+        } // end of fucnton
 
+        //function that calls model function when called
         public function change_password()
         {
             //check login
@@ -151,14 +152,13 @@
             }
 
             $data['user']= $this->user_model->get_user();
-
             $data['title'] = 'Change password';
-
             $this->load->view('includes/header');
             $this->load->view('users/change_password', $data);
             $this->load->view('includes/footer');
-        }
+        } // end of fucntion
 
+        //function that calls model function when called
         public function update()
         {
             //check login
@@ -172,8 +172,9 @@
             $this->session->set_flashdata('profile_updated', 'Profile updated.');
 
             redirect('profile');            
-        }
+        } // end of function
 
+        //function that calls model function when called
         public function update_password()
         {
             $this->form_validation->set_rules('password', 'Password', 'required');
@@ -196,8 +197,9 @@
             redirect('users/login');
             //set message
             $this->session->set_flashdata('password_updated', 'Password updated.');         
-        }
+        } // end of function
 
+        //function that calls model function when called
         public function login_history()
         {
             //check login
@@ -209,13 +211,12 @@
             //setting page title
            $data['title'] =  'Loggin history';
            $data['login_history'] = $this->user_model->login_history_view();
-            
            $this->load->view('includes/header');
            $this->load->view('users/history', $data);
            $this->load->view('includes/footer');
-
-        }
+        } // end of fucntion
         
+        //function that calls model function when called
         public function count_note()
         {
             //check login
@@ -223,8 +224,7 @@
             {
                 redirect('users/login');
             }
-
             $data['count'] = $this->note_model->count_note();
             $this->load->view('users/profile', $data);
-        }  
-    }
+        } // end of fucntion 
+    } // end of class

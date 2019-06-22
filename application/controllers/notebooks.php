@@ -1,6 +1,8 @@
+<!--this is a controller class of notebook-->
 <?php
     class Notebooks extends CI_Controller
     {
+        //function which loads folowing data when called 
         public function index()
         {
             //check login
@@ -8,15 +10,13 @@
             {
                 redirect('users/login');
             }
-            
             $data['title'] = "Notebooks";
             $data['notebooks'] = $this->notebook_model->get_notebooks();
-
             //load following assets
             $this->load->view('includes/header');
             $this->load->view('notebooks/index', $data);
             $this->load->view('includes/footer');
-        }
+        } // end of function
 
         //function to add new notebook
         public function add()
@@ -26,9 +26,7 @@
             {
                 redirect('users/login');
             }
-            
             $data['title'] = "Add Notebook";
-
             $this->form_validation->set_rules('name','Name', 'required');
             if($this->form_validation->run() === FALSE)
             {
@@ -44,20 +42,21 @@
 
                 redirect('notebooks');
             }
-        }
+        }// end of function
 
-        //function
+        //function that calls model function when called
         public function notes($notebookid)
         {
-            $data['title']= $this->notebook_model->get_notebook($notebookid)->notebookname;
+            $data['title']= $this->notebnok_model->get_notebook($notebookid)->notebookname;
 
             //load following assets
             $data['notes'] = $this->note_model->get_notes_by_notebook($notebookid);
             $this->load->view('includes/header');
             $this->load->view('notes/index', $data);
             $this->load->view('includes/footer');
-        }
+        } // end of function
 
+        //function that calls model function when called
         public function delete($notebookid)
         {
              //check login
@@ -66,13 +65,10 @@
                 //redirect page to users/login
                  redirect('users/login');
             }
-
            $this->notebook_model->delete_notebook($notebookid);
-
            //set message
            $this->session->set_flashdata('notebook_deleted', 'Notebook deleted.');
-
            //redirect page to notes
            redirect('notebooks');
         }
-    }
+    } // end of function
