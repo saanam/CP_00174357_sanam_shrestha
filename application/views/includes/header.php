@@ -48,7 +48,7 @@
 <body>
 <!--start of nav part-->
 <nav class="navbar navbar-expand-lg navbar-custom py-0">
-  <a class="navbar-brand" href="<?php echo base_url(); ?>">N&T</a> <!--echo base_url refers to localhost/cp-->
+  <a class="navbar-brand" href="<?php echo base_url(); ?>users/login">N&T</a> <!--echo base_url refers to localhost/cp-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
