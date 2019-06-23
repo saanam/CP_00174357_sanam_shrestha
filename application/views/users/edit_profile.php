@@ -14,10 +14,10 @@
                     <!--this shows title of this page-->
                         <h1 class=" text text-center"><?= $title; ?></h1>
                         <div class="form-group">
-                            <label class="text">Name</label>
+                            <label class="text">Nickname</label>
                             <!-- here user's name is displayed-->
                             <input type="text" class="form-control" name="name"
-                            placeholder="Name" value="<?php echo $user['name']; ?>">
+                            placeholder="Nickname" value="<?php echo $user['name']; ?>">
                         </div>
 
                         <div class="form-group">
