@@ -1,5 +1,7 @@
-<h2><?= $title ?></h2>
 
-<div class="background">
+        <h2><?= $title; ?></h2><hr>
 
-</div>
+
+        <div class="background">
+
+        </div>

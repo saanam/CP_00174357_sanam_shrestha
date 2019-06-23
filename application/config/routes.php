@@ -56,6 +56,8 @@ $route['notes/update'] = 'notes/update';
 $route['notes/(:any)'] = 'notes/view/$1';
 $route['notes'] = 'notes/index';
 
+$route['pages/help'] = 'help/index';
+
 $route['profile'] = 'profile/index';
 $route['users/update'] = 'users/update';
 $route['users/p_update'] = 'users/update_password';

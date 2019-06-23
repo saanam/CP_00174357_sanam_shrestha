@@ -33,6 +33,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 
   <!--  jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.0.943/build/pdf.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
   <!-- Bootstrap Date-Picker Plugin -->
@@ -73,11 +74,12 @@
                     <a class="nav-link" href="<?php echo base_url(); ?>profile">Profile<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout<span class="sr-only">(current)</span></a>
                       <form class="form-inline my-2 my-lg-0" action="<?php echo base_url(); ?>notes/note_search">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="search" name="search" method="POST">
-                          <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">Search</button>
+                        
+                          <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">View All Notes</button>
                       </form>               
              <?php endif; ?>
              <!-- end of if condition-->
+             <a class="nav-link" href="<?php echo base_url(); ?>pages/help">Help<span class="sr-only">(current)</span></a>
         </ul>
       </div>
 </nav>
