@@ -1,0 +1,150 @@
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(170, 48, 11, 0.986);
+    padding: .75rem 1rem;
+}
+
+/* change the color and background color of active links */
+.navbar-custom .nav-link
+{
+    color: rgba(146, 210, 235, 0.986);
+
+}
+
+html, body {
+
+    height: auto ;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.background
+{
+    height: 100%;
+    padding-top: 70%;
+}
+
+.notebook
+{
+    background: rgba(255, 192, 203, 0.062);
+
+}
+
+.todo
+{
+    background: rgba(255, 192, 203, 0.062);
+
+}
+
+.note-date{
+    background:rgba(126, 57, 182, 0.103);
+    padding: 4px;
+    margin: 3px;
+    display: block;
+}
+
+.post-thumb{
+    width:55%;
+    padding-top: 50px;
+    padding-left: 20px;
+    opacity: 0.4;
+    
+}
+
+.pagination-links
+{
+    margin: 30px 0;
+}
+
+.pagination-links strong 
+{
+    padding: 8px 13px;
+    margin: 5px;
+    background: rgba(156, 98, 223, 0.233);
+    border: 1px #cccccc solid;
+}
+
+a.pagination-link
+{
+    padding: 8px 13px;
+    margin: 5px;
+    background: rgba(156, 98, 223, 0.233);
+    border: 1px #8669ee34 solid;
+}
+
+.notebook-delete
+{
+    display:inline;
+}
+
+.note-image
+{
+    padding-left: 25px;
+    height: 100px;
+    
+}
+
+.note-body
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+
+}
+
+.text
+{
+    color: rgba(170, 48, 11, 0.986);
+    margin: 4px;
+    padding-bottom: 10px;
+
+}
+
+.card 
+{
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 3%;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #fff;
+  }
+  
+  .card-4 
+  {
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-4 .card-body 
+  {
+    padding: 57px 65px;
+    padding-bottom: 65px;
+  }
+  
+  @media (max-width: 767px) 
+  {
+    .card-4 .card-body 
+    {
+      padding: 50px 40px;
+    }
+  }
+
+  .profile
+  {
+
+  }
+
+  
+  
