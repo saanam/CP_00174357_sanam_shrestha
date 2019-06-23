@@ -14,9 +14,9 @@
             <!--this shows title of this page-->
                 <h1 class=" text text-center"><?= $title; ?></h1>
                 <div class="form-group">
-                    <label class="text">Name</label>
+                    <label class="text">Nickname</label>
                     <input type="text" class="form-control" name="name"
-                    placeholder="Name" required>
+                    placeholder="Nickname" required>
                 </div>
 
                 <div class="form-group">
