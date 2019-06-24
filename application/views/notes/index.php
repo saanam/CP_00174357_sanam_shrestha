@@ -7,10 +7,11 @@
         <div class="col-md-6">
             <h2 class="text"><?= $title ?></h2>
         </div>
+        <!--div to show taks notification-->
         <div class="col-md-6">
             <?php if($notify > 0)
             {?>
-               <center><?php echo 'YOU GOT TASKS TO COMPLETE!' ?> 
+               <h3 class=" notify text"<center><strong><?php echo 'YOU GOT TASKS TO COMPLETE!' ?></strong></center></h3> 
            <?php } 
             else{echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
         </div>
