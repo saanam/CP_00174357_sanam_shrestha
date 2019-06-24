@@ -12,6 +12,7 @@
                     <a class="btn btn-primary" href="<?php echo base_url(); ?>users/change_password">Change password</a><br /><br />
                     <a class="btn btn-primary" href="<?php echo base_url(); ?>users/login_history">Login log</a><br /><br />
                     <a class="btn btn-primary" href="<?php echo base_url(); ?>export_csv/index">Export data</a><br /><br />
+                    <a class="btn btn-primary" href="<?php echo base_url(); ?>profile/trash">Trash</a><br /><br />
                     </center>
                 </div>
                             <!--Total number of notes saved are shown-->

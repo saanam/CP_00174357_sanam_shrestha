@@ -47,7 +47,7 @@
         //function that calls model function when called
         public function notes($notebookid)
         {
-            $data['title']= $this->notebnok_model->get_notebook($notebookid)->notebookname;
+            $data['title']= $this->notebook_model->get_notebook($notebookid)->notebookname;
 
             //load following assets
             $data['notes'] = $this->note_model->get_notes_by_notebook($notebookid);

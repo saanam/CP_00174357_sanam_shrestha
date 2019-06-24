@@ -109,7 +109,10 @@
                 //redirect page to users/login
                  redirect('users/login');
             }
-           $this->note_model->delete_note($noteid);
+            //insert into trash table
+            $this->trash_model->trash_note($noteid);
+            //delete selected note
+            $this->note_model->delete_note($noteid);
 
            //set message
            $this->session->set_flashdata('note_deleted', 'Note deleted.');

@@ -35,7 +35,7 @@
           <label>Upload Image</label>
           <input type="file" name="userfile" size="20">
         </div>
-        <button type="submit" class="btn btn-warning">Submit</button>
+        <button type="submit" class="btn btn-warning">Update note</button>
       </form>
   </div>
 </div>

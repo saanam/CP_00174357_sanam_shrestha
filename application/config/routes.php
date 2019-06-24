@@ -61,6 +61,7 @@ $route['pages/help'] = 'help/index';
 $route['profile'] = 'profile/index';
 $route['users/update'] = 'users/update';
 $route['users/p_update'] = 'users/update_password';
+$route['profile/trash'] = 'trash/index';
 
 $route['todo'] = 'todo/index';
 $route['todo/update'] = 'todo/update';
