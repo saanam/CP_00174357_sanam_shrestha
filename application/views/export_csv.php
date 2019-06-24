@@ -13,7 +13,7 @@
                                 <h3 class="panel-title text"> Notes data</h3>
                             </div>
                             <div class="col-md-6" align="right">
-                                <input type="submit" name="export" class="btn btn-success btn-xs" value="Export to CSV"/>
+                                <input type="submit" name="export" class="btn btn-success btn-xs" value="Export"/>
 
                             </div>
                         </div>

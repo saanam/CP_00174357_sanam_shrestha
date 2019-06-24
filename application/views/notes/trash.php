@@ -1,4 +1,4 @@
-<!--this is a index page of note where added notes are shown-->
+<!--this is a index page of trash where moved notes are shown-->
 <!--this part presents cart section-->
 <div class="card card-4">
     <div class="card-body">
@@ -20,7 +20,7 @@
                             </div>
                             <br><br>
                             <?php echo form_open('/trash/recover/'.$t['tid']); ?>
-                            <!-- this button leads to full note page of that particular note-->
+                            <!-- this button  recovers note that has been deleted-->
                             <p><button type="submit" class="btn btn-warning" method="POST">Recover</button></p> </form>
                             <hr>
                         </div>

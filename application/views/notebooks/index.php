@@ -11,7 +11,7 @@
                 <form class="notebook-delete" action = "notebooks/delete/<?php echo $notebook["notebookid"]; ?>" method = "POST">
                     <input type="submit" class="btn-link text-danger" value="[X]">
 
-</form>
+                </form>
                 <?php endif; ?>
                 </li>
             <?php endforeach; ?>

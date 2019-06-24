@@ -1,6 +1,8 @@
+<!-- this is a controller of trash page-->
 <?php 
     class Trash extends CI_Controller
     {
+        //this function controls data from from trash view to model
         function index()
         {
             //check login
@@ -16,6 +18,7 @@
 
         }
 
+        //this function receivs $id from view and sends that data to model
         function recover($tid)
         {
             if(!$this->session->userdata('logged_in'))
@@ -28,4 +31,4 @@
             
             redirect('profile/trash');
         }
-    }
+    } // end of class
