@@ -11,8 +11,9 @@
                 </div>
                 <!-- in this div picture is shown-->
                 <div class="col-sm-4">                
-                <img class="note-image" src="<?php echo site_url(); ?>assets/images/notes/
-                <?php echo $note['post_image']; ?>">
+                <img class="note-image" 
+                src="<?php echo site_url(); ?>assets/images/notes/<?php 
+                echo $note['post_image']; ?>">
                 </div>
 
                 <div class="col-sm-4">
@@ -26,8 +27,8 @@
             <!--start of if condition-->
             <?php if($this->session->userdata('user_id') == $note['user_id']) :?>
                 <hr>
-                    <a class="btn btn-warning col-sm-1 col-sm-offset-1" href="edit/
-                    <?php echo $note['slug']; ?>">Edit</a>
+                    <a class="btn btn-warning col-sm-1 col-sm-offset-1" href="edit/<?php 
+                    echo $note['slug']; ?>">Edit</a>
                         <?php echo form_open('/notes/delete/'.$note['noteid']); ?>
                             <input type="submit" value="Delete" class="btn btn-danger col-sm-1 col-sm-offset-1">
                     </form>

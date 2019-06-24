@@ -13,7 +13,8 @@
             {?>
                <h3 class=" notify text"<center><strong><?php echo 'YOU GOT TASKS TO COMPLETE!' ?></strong></center></h3> 
            <?php } 
-            else{echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
+            else{?>
+                <h3 class=" notify text"<center><?php echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?></strong></center></h3> 
         </div>
         </div>
             <?php foreach((array) $notes as $note) : ?>

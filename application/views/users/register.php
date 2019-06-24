@@ -15,25 +15,25 @@
                 <h1 class=" text text-center"><?= $title; ?></h1>
                 <div class="form-group">
                     <label class="text">Nickname</label>
-                    <input type="text" class="form-control" name="name"
+                    <input type="text" minlength="3" maxlength="50" class="form-control" name="name"
                     placeholder="Nickname" required>
                 </div>
 
                 <div class="form-group">
                     <label class="text">Email</label>
-                    <input type="text" class="form-control" name="email"
+                    <input type="text" maxlength="100" class="form-control" name="email"
                     placeholder="Email" required>
                 </div>
 
                 <div class="form-group">
                     <label class="text">Password</label>
-                    <input type="password" class="form-control" name="password"
+                    <input type="password" minlength="8" maxlength="20"class="form-control" name="password"
                     placeholder="Password" required>
                 </div>
 
                 <div class="form-group">
                     <label class="text">Confirm Password</label>
-                    <input type="password" class="form-control" name="password2"
+                    <input type="password" minlength="8" maxlength="20" class="form-control" name="password2"
                     placeholder="Confirm password" required>
                 </div>
 
