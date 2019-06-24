@@ -15,7 +15,6 @@
                 'user_id' => $this->session->userdata('user_id'),
                 'tododate' => $this->input->post('date')
             );
-
             return $this->db->insert('todo', $data);
         }
         
@@ -27,13 +26,9 @@
                 'status' => 'incompleted',
                 'tododate' => date('y-m-d')
             );
-
                 $this->db->order_by('todoid', 'DESC');
-
                 $query = $this->db->get_where('todo', $id);
-                
                 return $query->result_array();
-        
         }
         
         //function to get tasks
@@ -43,13 +38,9 @@
                 'user_id' => $this->session->userdata('user_id'),
                 'status' => 'completed'
             );
-
                 $this->db->order_by('todoid', 'DESC');
-
                 $query = $this->db->get_where('todo', $id);
-                
                 return $query->result_array();
-        
         }
 
         //update todo function
@@ -59,8 +50,20 @@
             $data = array(
                 'status' => 'completed'
                 );
-        
                 $this->db->where('todoid', $todoid);
                 return $this->db->update('todo', $data);
         }
-    }
+
+        //function to count incomplete tasks
+        function notify_tasks()
+        {
+            $id= array(
+                'user_id' => $this->session->userdata('user_id'));
+                $this->db->count_all_results('todo');  // Produces an integer
+                $this->db->where('user_id', $this->session->userdata('user_id'));
+                $this->db->where('status', 'incompleted');
+                $this->db->where('tododate', date('Y-m-d'));
+                $this->db->from('todo');
+                return $this->db->count_all_results();
+        }
+    } //end of class

@@ -3,7 +3,18 @@
 <div class="card card-4">
     <div class="card-body">
     <!--this shows title of this page-->
-        <h2 class="text"><?= $title ?></h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="text"><?= $title ?></h2>
+        </div>
+        <div class="col-md-6">
+            <?php if($notify > 0)
+            {?>
+               <center><?php echo 'YOU GOT TASKS TO COMPLETE!' ?> 
+           <?php } 
+            else{echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
+        </div>
+        </div>
             <?php foreach((array) $notes as $note) : ?>
             <!-- here name of note is displayed-->
                 <h3 class="text"><?php echo $note['notename']; ?></h3> 
@@ -36,3 +47,4 @@
 <div class="background">
 
 </div>
+<!--end of page-->
