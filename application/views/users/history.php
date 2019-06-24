@@ -17,23 +17,16 @@
                             <th class="text">Logged time</th>
                         </tr>
                         <?php
-                            foreach($login_history as $row)
-                            {                              
-                                ?> 
+                            foreach($login_history as $row): ?>
+
                                 <tr>
                                     <td><?php echo $row->email; ?></td>
                                     <td><?php echo $row->logged_time; ?></td>
-                                </tr>                                   
-                                <?php 
-                            } 
-                        ?>
+                                </tr><?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--start of card section-->
-<div class="background">
-
-</div>
+<!--end of card section-->

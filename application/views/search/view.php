@@ -18,19 +18,14 @@
                             </tr>
                             <!--start of foreach-->
                             <?php
-                                foreach($notes as $row)
-                                {
-                                    ?>
+                                foreach($notes as $row): ?>
+
                                     <!--here note name is displayed--> 
                                     <tr>
                                         <td><?php echo $row->notename; ?></td>
                                                                               
                                     </tr>
-                                        
-                                    <?php 
-                                } 
-                            ?>
-                        </div>
+                        </div><?php endforeach; ?>
                     </div>
                 </div>
             </form>
