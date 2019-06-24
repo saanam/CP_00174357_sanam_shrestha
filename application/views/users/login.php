@@ -12,11 +12,11 @@
        <!--this shows title of this page-->
             <h1 class=" text text-center"><?php echo $title; ?></h1>
             <div class="form-group">
-                <input type="text" name="email" class="form-control"
+                <input type="text" maxlength="100" name="email" class="form-control"
                 placeholder="Enter email" required autofocous>
             </div>
             <div class="form-group">
-                <input type="password" name="password" class="form-control"
+                <input type="password" minlength="8" maxlength="20" name="password" class="form-control"
                 placeholder="Enter password" required autofocous>
             </div>
                 <button type="submit" class="btn btn-warning btn-block">Login</button>

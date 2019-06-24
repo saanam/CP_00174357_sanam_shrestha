@@ -20,7 +20,6 @@
                             <?php
                                 foreach($notes as $row)
                                 {
-                                    
                                     ?>
                                     <!--here note name is displayed--> 
                                     <tr>

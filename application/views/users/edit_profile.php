@@ -16,14 +16,14 @@
                         <div class="form-group">
                             <label class="text">Nickname</label>
                             <!-- here user's name is displayed-->
-                            <input type="text" class="form-control" name="name"
+                            <input type="text" minlength="3" maxlength="50" class="form-control" name="name"
                             placeholder="Nickname" value="<?php echo $user['name']; ?>">
                         </div>
 
                         <div class="form-group">
                             <label class="text">Email</label>
                             <!-- here user's email is displayed-->
-                            <input type="text" class="form-control" name="email"
+                            <input type="text" maxlength="100" class="form-control" name="email"
                             placeholder="Email" value="<?php echo $user['email']; ?>">
                         </div>
 

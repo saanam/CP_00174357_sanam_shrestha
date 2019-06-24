@@ -22,6 +22,9 @@
                             <?php echo form_open('/trash/recover/'.$t['tid']); ?>
                             <!-- this button  recovers note that has been deleted-->
                             <p><button type="submit" class="btn btn-warning" method="POST">Recover</button></p> </form>
+                            <?php echo form_open('/trash/delete/'.$t['tid']); ?>
+                            <!-- this button  recovers note that has been deleted-->
+                            <p><button type="submit" class="btn btn-danger" method="POST">Delete</button></p> </form>
                             <hr>
                         </div>
                         <hr>

@@ -31,4 +31,18 @@
             
             redirect('profile/trash');
         }
+
+        
+        //this function receivs $id from view and sends that data to model
+        function delete($tid)
+        {
+            if(!$this->session->userdata('logged_in'))
+            {
+                //redirect page to users/login
+                 redirect('users/login');
+            }
+            $this->trash_model->delete($tid); 
+            
+            redirect('profile/trash');
+        }
     } // end of class
