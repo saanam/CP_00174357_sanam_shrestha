@@ -3,7 +3,7 @@
 <div class="card card-4">
     <div class="card-body">
         <!--sends any error to validation_errors-->
-        <div class="text text-center text-danger"><?php echo validation_errors(); ?>
+        <div class="text text-center text-danger card-footer"><?php echo validation_errors(); ?>
             <?php echo 'Note: Password should be at least 8
                     characters in length and should include 
                     at least one upper case letter, one 
