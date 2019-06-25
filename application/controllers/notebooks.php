@@ -71,4 +71,4 @@
            //redirect page to notes
            redirect('notebooks');
         }
-    } // end of function
+    } // end of notebooks class

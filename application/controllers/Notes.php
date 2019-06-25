@@ -168,4 +168,4 @@
                 'Note updated.');
                 redirect('notes');
             } 
-    } // end of function
+    } // end of note class

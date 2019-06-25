@@ -11,9 +11,14 @@
            $this->form_validation->set_rules('email', 'Email', 'required|callback_check_email_exists');
            $this->form_validation->set_rules('password', 'Password', 'required');
            $this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password]');
-
+            $password = $this->input->post('password');
+            // Validate password strength
+            $uppercase = preg_match('@[A-Z]@', $password);
+            $lowercase = preg_match('@[a-z]@', $password);
+            $number    = preg_match('@[0-9]@', $password);
+            $specialChars = preg_match('@[^\w]@', $password);
            //start of if condition
-            if($this->form_validation->run() === FALSE)
+            if($this->form_validation->run() === FALSE ||!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8)
             {
                 //load following assets if above condition match
                 $this->load->view('includes/header');
@@ -24,12 +29,10 @@
             {
                 //encrypt password
                 $enc_password = md5($this->input->post('password'));
-
+                //sends encrypted password in user_model register function
                 $this->user_model->register($enc_password);
-
                 //set message
                 $this->session->set_flashdata('user_registered', 'Registretion complete. Please proceed to login page for login.');
-
                 //redirect page to notes
                 redirect('notes');
             }
@@ -76,11 +79,10 @@
                     );
                     //stores above array data so it can be access anytime we need
                     $this->session->set_userdata($user_data);
-
                     $this->user_model->login_history_set();
                     //set message
                     $this->session->set_flashdata('user_loggedin', 'Login sucessfull.');
-
+                    //redirecr page to notes
                     redirect('notes');
 
                 }
@@ -107,7 +109,6 @@
 
             //set message
             $this->session->set_flashdata('user_logout', 'logout complete');
-
             //redurect page to users/login
             redirect('users/login');
         } // end of fucniton
@@ -150,7 +151,6 @@
             {
                 redirect('users/login');
             }
-
             $data['user']= $this->user_model->get_user();
             $data['title'] = 'Change password';
             $this->load->view('includes/header');
@@ -170,7 +170,7 @@
 
             //set message
             $this->session->set_flashdata('profile_updated', 'Profile updated.');
-
+            //redirect page to profile
             redirect('profile');            
         } // end of function
 
@@ -226,5 +226,5 @@
             }
             $data['count'] = $this->note_model->count_note();
             $this->load->view('users/profile', $data);
-        } // end of fucntion 
-    } // end of class
+        } //end of function
+    } // end of user class

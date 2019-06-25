@@ -131,4 +131,4 @@
             $this->db->from('todo');
             return $this->db->count_all_results();
         }
-    }
+    } // end of user_model class
