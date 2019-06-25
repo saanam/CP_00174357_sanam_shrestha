@@ -54,7 +54,7 @@
                     <strong>How to find and recover deleted notes</strong>
                 </div>
                 <!--answer-->
-                    <div class="card-footer"> 
+                    <div class="card-body"> 
                         Once you delete any note it will directly send to <strong>trash</strong>. 
                         You can access <strong>trash</strong> by clicking on <strong>Profile</strong>
                         and in <strong>trash</strong> section. but once you have deleted notes 
@@ -66,7 +66,3 @@
                         ' Open any notes you find inside and check for your missing content. <br />
                         <strong>2.	Recover from backup: </strong>If you have a backup of the note, you can import it back into app.<br />
                     </div>
-                        <hr>
-        <div class="background">
-
-        </div>

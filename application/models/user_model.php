@@ -30,7 +30,6 @@
             else
             {
                 return FALSE;
-                
             }
         }
 
@@ -53,7 +52,6 @@
             );
 
             $query = $this->db->get('login_history');
-            
             $query = $this->db->get_where('login_history', $data);
             return $query->result();
         }
