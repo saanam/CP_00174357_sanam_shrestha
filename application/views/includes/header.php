@@ -138,4 +138,8 @@
       <?php echo '<p class="alert-primary">'.$this->session->flashdata('todo_alert').'</p>'; ?>
     <?php endif; ?>
 
+    <?php if($this->session->flashdata('old_passwordwrong')): ?>
+      <?php echo '<p class="alert-danger">'.$this->session->flashdata('old_passwordwrong').'</p>'; ?>
+    <?php endif; ?>
+
   </center>

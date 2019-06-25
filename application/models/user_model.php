@@ -95,11 +95,11 @@
         }
 
         //function to change password of user
-        public function change_password_m($enc_password)
+        public function change_password_m($enc_password1)
         {
             $id = $this->session->userdata('user_id');
             $data = array(
-                'password'=> $enc_password
+                'password'=> $enc_password1
             );
                 $this->db->where('userid', $id);
                 return $this->db->update('users', $data); 

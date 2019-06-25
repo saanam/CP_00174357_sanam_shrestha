@@ -18,7 +18,8 @@
             $number    = preg_match('@[0-9]@', $password);
             $specialChars = preg_match('@[^\w]@', $password);
            //start of if condition
-            if($this->form_validation->run() === FALSE ||!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8)
+            if($this->form_validation->run() === FALSE ||!$uppercase || !$lowercase 
+            || !$number || !$specialChars || strlen($password) < 8)
             {
                 //load following assets if above condition match
                 $this->load->view('includes/header');
@@ -28,11 +29,12 @@
             else
             {
                 //encrypt password
-                $enc_password = md5($this->input->post('password'));
+                $enc_password = md5($password);
                 //sends encrypted password in user_model register function
                 $this->user_model->register($enc_password);
                 //set message
-                $this->session->set_flashdata('user_registered', 'Registretion complete. Please proceed to login page for login.');
+                $this->session->set_flashdata('user_registered', 'Registretion complete.
+                 Please proceed to login page for login.');
                 //redirect page to notes
                 redirect('notes');
             }
@@ -74,7 +76,7 @@
                     $user_data= array(
                         'user_id'=> $user_id,
                         'email' => $email,
-                        'name' => $name,
+                        'password' => $password,
                         'logged_in' => true
                     );
                     //stores above array data so it can be access anytime we need
@@ -106,6 +108,7 @@
             $this->session->unset_userdata('logged_in');
             $this->session->unset_userdata('user_id');
             $this->session->unset_userdata('email');
+            $this->session->unset_userdata('password');
 
             //set message
             $this->session->set_flashdata('user_logout', 'logout complete');
@@ -177,26 +180,61 @@
         //function that calls model function when called
         public function update_password()
         {
-            $this->form_validation->set_rules('password', 'Password', 'required');
-            $this->form_validation->set_rules('password1', 'Password1', 'required');
-            $this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password1]');
-            //check login
-            if(!$this->session->userdata('logged_in'))
-            {
-                redirect('users/login');
-            }
-            $enc_password = md5($this->input->post('password1'));
-            $this->user_model->change_password_m($enc_password);
+                 //check login
+                 if(!$this->session->userdata('logged_in'))
+                 {
+                     redirect('users/login');
+                 }
+                    $this->form_validation->set_rules('password', 'Password', 'required');
+                    $this->form_validation->set_rules('password1', 'Password1', 'required');
+                    $this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password1]');
+                    $enc_password = md5($this->input->post('password'));
+                    $password = $this->input->post('password1');
+                    // Validate password strength
+                    $uppercase = preg_match('@[A-Z]@', $password);
+                    $lowercase = preg_match('@[a-z]@', $password);
+                    $number    = preg_match('@[0-9]@', $password);
+                    $specialChars = preg_match('@[^\w]@', $password); 
+                    $enc_password1 = md5($password);
+                       if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8)
+                       {
+                            //set message
+                            $this->session->set_flashdata('old_passwordwrong', 'Your 
+                            current password or new password is incorrect.
+                             Note: Password should be at least 8 characters in length
+                              and should include at least one upper case letter, one
+                               number, and one special character.');
+                            //redurect page to users/login
+                            redirect('users/change_password');
+                       }  
+                        else
+                        {
+                            if($enc_password == $this->session->userdata('password'))
+                            {
+                                $email = $this->session->userdata('email');
+                                $this->user_model->change_password_m($enc_password1);
+                                //unset userdata(session)
+                                $this->session->unset_userdata('logged_in');
+                                $this->session->unset_userdata('user_id');
+                                $this->session->unset_userdata('email');
+                                $this->session->unset_userdata('password');
+                                //set message
+                                $this->session->set_flashdata('password_updated', 'Your 
+                                has been updated, Login to verify password.');
+                                //redurect page to users/login
+                                redirect('users/login');
+                            }
+                            else
+                            {
+                                //set message
+                                $this->session->set_flashdata('old_passwordwrong', 'Your 
+                                current password is incorrect');
+                                //redurect page to users/login
+                                redirect('users/change_password');
 
-            //unset userdata(session)
-            $this->session->unset_userdata('logged_in');
-            $this->session->unset_userdata('user_id');
-            $this->session->unset_userdata('email');
-            
-            //redurect page to users/login
-            redirect('users/login');
-            //set message
-            $this->session->set_flashdata('password_updated', 'Password updated.');         
+                            }
+                        }
+                            
         } // end of function
 
         //function that calls model function when called
