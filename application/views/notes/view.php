@@ -21,7 +21,7 @@
                 </div>
             </div>
                 <!-- in this div note detail is shown-->
-                <div class="note-body ">
+                <div class="note-body card-footer">
                         <?php echo $note['notedetail']; ?>
                 </div>
             <!--start of if condition-->

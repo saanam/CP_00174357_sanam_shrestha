@@ -39,7 +39,7 @@
                             echo $note['notecreateddot']; ?>
                             </small><br> 
                             <!-- Note detail is shown with word limit of 70-->
-                            <div class="note-index-body"> <?php 
+                            <div class="note-index-body card-footer"> <?php 
                             echo word_limiter($note['notedetail'], 70); ?> 
                             </div>
                             <br><br>
