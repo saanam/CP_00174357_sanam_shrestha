@@ -9,12 +9,9 @@
                'name'=> $this->input->post('name'),
                'email'=> $this->input->post('email'),
                'password'=> $enc_password
-
             );
-
             //insert user
             return $this->db->insert('users', $data);
-
         }
 
         //lOG USER IN
@@ -25,7 +22,6 @@
             $this->db->where('password', $password);
 
             $result= $this->db->get('users');
-
             if($result->num_rows() == 1)
             {
 
@@ -45,7 +41,6 @@
                 'user_id' => $this->session->userdata('user_id'),
                 'email' => $this->session->userdata('email')
             );
-
             $this->db->insert('login_history', $data);
         }
 
@@ -105,11 +100,9 @@
         public function change_password_m($enc_password)
         {
             $id = $this->session->userdata('user_id');
-
             $data = array(
                 'password'=> $enc_password
             );
-
                 $this->db->where('userid', $id);
                 return $this->db->update('users', $data); 
         }
@@ -119,7 +112,6 @@
         {
             $id= array(
                 'user_id' => $this->session->userdata('user_id'));
-
             $query = $this->db->query('SELECT * FROM notes where user_id ='.$id);
             return $query->num_rows();
         }
@@ -131,8 +123,6 @@
             $this->db->where('user_id', ($id));
             $this->db->from('notes');
             return $this->db->count_all_results();;
-
-
         }
 
         //function to count tasks and reutrn integer value

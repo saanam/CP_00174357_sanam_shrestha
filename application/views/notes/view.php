@@ -30,7 +30,8 @@
                     <a class="btn btn-warning col-sm-1 col-sm-offset-1" href="edit/<?php 
                     echo $note['slug']; ?>">Edit</a>
                         <?php echo form_open('/notes/delete/'.$note['noteid']); ?>
-                            <input type="submit" value="Delete" class="btn btn-danger col-sm-1 col-sm-offset-1">
+                            <input type="submit" value="Delete" 
+                            class="btn btn-danger col-sm-1 col-sm-offset-1">
                     </form>
             <?php endif; ?>
             <!--end of if condotion-->

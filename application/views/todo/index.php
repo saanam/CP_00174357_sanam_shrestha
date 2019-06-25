@@ -3,7 +3,7 @@
 <div class="card card-4">
     <div class="card-body">
     <!--this shows title of this page-->
-        <h2 class="text"><?= $title; ?></h2><br />
+        <h2 class="text card-header"><?= $title; ?></h2><br />
 
             <ul class="list-group">
                 <div class="row">
@@ -16,12 +16,12 @@
                         <a class="btn btn-primary" href="<?php echo base_url(); ?>todo/view">View completed tasks</a>
                     </div>
 
-                        <div class="col-sm-9">
+                        <div class="col-sm-9 card-footer">
                         <!--here aded incomplete tasks are displayd-->
                         <!-- start of foreach-->
                             <?php foreach($todos as $todo): ?>
                             <!--task name is dispayed here-->
-                                <li class="list-group-item todo"><?php echo $todo['todoname']; ?></a>
+                                <li class="list-group-item todo "><?php echo $todo['todoname']; ?></a>
                                     <?php if($this->session->userdata('user_id') == $todo['user_id']) :?>
                                         <form class="todo-update" action = "todo/update/<?php echo $todo["todoid"]; ?>" method = "POST">
                                         <!-- to set task complete-->

@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-md-6 form-group">
                 <!--this shows title of this page-->
-                <h2 class="text text-center"><?= $title ;?></h2>
+                <h2 class="text text-center card-header"><?= $title ;?></h2>
                 </div>
                 <div class="col-md-3 form-group">
 
@@ -22,7 +22,7 @@
                         <div class="col-md-3 form-group">
 
                         </div>
-                            <div class="col-md-6 form-group">
+                            <div class="col-md-6 form-group card-footer">
                                 <label class="text">Task name</label>
                                 <input type="text" class="form-control" name="todoname" placeholder="Task name">
 
