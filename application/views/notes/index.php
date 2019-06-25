@@ -11,12 +11,15 @@
         <div class="col-md-6">
             <?php if($notify > 0)
             {?>
-               <a href="<?php echo base_url(); ?>todo" h4 class=" notify text"<center><strong><?php 
-               echo 'YOU GOT ';?><?php echo $notify; ?><?php echo ' TASK(S) TO COMPLETE!'; ?>
+               <a href="<?php echo base_url(); ?>todo" h4 
+               class=" notify text"<center><strong><?php 
+               echo 'YOU GOT ';?><?php echo $notify; ?><?php 
+               echo ' TASK(S) TO COMPLETE!'; ?>
                </a></strong></center></h4> 
            <?php } 
             else{?>
-                <h4 class=" notify text"<center><?php echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
+                <h4 class=" notify text"<center><?php 
+                echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
                 </strong></center></h4> 
         </div>
         </div>
@@ -26,7 +29,8 @@
                 <div class="row">
                     <div class="col-md-3">
                     <!-- note uploded/default image is shown-->
-                        <img class="post-thumb" src="<?php echo site_url(); ?>assets/images/notes/<?php 
+                        <img class="post-thumb" src="<?php 
+                        echo site_url(); ?>assets/images/notes/<?php 
                         echo $note['post_image']; ?>"> 
                     </div>
                         <div class="col-md-9">
@@ -39,7 +43,8 @@
                             echo word_limiter($note['notedetail'], 70); ?> 
                             </div>
                             <br><br>
-                            <!-- this button leads to full note page of that particular note-->
+                            <!-- this button leads to full note page of that particular
+                             note-->
                             <p><a class="btn btn-warning" href="<?php 
                             echo site_url('/notes/'.$note['slug']); ?>
                             ">Read more</a></p> 
