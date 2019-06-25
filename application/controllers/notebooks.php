@@ -48,8 +48,8 @@
         public function notes($notebookid)
         {
             $data['title']= $this->notebook_model->get_notebook($notebookid)->notebookname;
-
             //load following assets
+            $data['notify'] = $this->todo_model->notify_tasks();
             $data['notes'] = $this->note_model->get_notes_by_notebook($notebookid);
             $this->load->view('includes/header');
             $this->load->view('notes/index', $data);

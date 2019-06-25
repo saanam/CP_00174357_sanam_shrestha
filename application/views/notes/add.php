@@ -5,7 +5,8 @@
     <!--this part shown title of current page-->
       <h2 class="text"><?= $title ?></h2>
  <!-- if any errors occurs, it is hown in this part-->     
-<?php echo validation_errors(); ?>
+ <div class="text text-danger text-center"><strong><?php echo validation_errors(); ?>
+  </strong></div>
 <!--opens form supporting images-->
 <?php echo form_open_multipart('notes/add'); ?>
 <div class="form-group">

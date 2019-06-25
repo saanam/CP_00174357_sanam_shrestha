@@ -15,7 +15,8 @@
                 </div>
         </div>
             <!-- any errors encounted, it will be shown here-->
-            <?php echo validation_errors(); ?>
+            <div class="text text-danger text-center"><strong><?php echo validation_errors(); ?>
+            </strong></div>
             <!--opens form support images-->
                 <?php echo form_open_multipart('todo/add'); ?>
                     <div class="row">

@@ -5,7 +5,8 @@
         <!--This part shows title of page-->
         <h2 class="text"><?= $title ;?></h2>
         <!-- any errors encountred will be shown in validation_errors part-->
-        <?php echo validation_errors(); ?>
+        <div class="text text-danger text-center"><strong><?php echo validation_errors(); ?>
+        </strong></div>
         <!--form_open_multipart is like <form> which supports image also -->
         <?php echo form_open_multipart('notebooks/add'); ?>
             <div class="form-group">

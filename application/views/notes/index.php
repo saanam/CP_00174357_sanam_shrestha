@@ -5,18 +5,19 @@
     <!--this shows title of this page-->
     <div class="row card-header">
         <div class="col-md-6">
-            <h2 class="text"><?= $title ?></h2>
+            <h2 class="text"><strong><?= $title ?></strong></h2>
         </div>
         <!--div to show taks notification-->
         <div class="col-md-6">
             <?php if($notify > 0)
             {?>
-               <h3 class=" notify text"<center><strong><?php echo 'YOU GOT TASKS TO COMPLETE!' ?>
-               </strong></center></h3> 
+               <a href="<?php echo base_url(); ?>todo" h4 class=" notify text"<center><strong><?php 
+               echo 'YOU GOT ';?><?php echo $notify; ?><?php echo ' TASK(S) TO COMPLETE!'; ?>
+               </a></strong></center></h4> 
            <?php } 
             else{?>
-                <h3 class=" notify text"<center><?php echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
-                </strong></center></h3> 
+                <h4 class=" notify text"<center><?php echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
+                </strong></center></h4> 
         </div>
         </div>
             <?php foreach((array) $notes as $note) : ?>
@@ -30,14 +31,17 @@
                     </div>
                         <div class="col-md-9">
                             <!--here date in which note is crated is displayed-->
-                            <small class ="note-date"> Saved on:<?php echo $note['notecreateddot']; ?>
+                            <small class ="note-date"> Saved on:<?php 
+                            echo $note['notecreateddot']; ?>
                             </small><br> 
                             <!-- Note detail is shown with word limit of 70-->
-                            <div class="note-index-body"> <?php echo word_limiter($note['notedetail'], 70); ?> 
+                            <div class="note-index-body"> <?php 
+                            echo word_limiter($note['notedetail'], 70); ?> 
                             </div>
                             <br><br>
                             <!-- this button leads to full note page of that particular note-->
-                            <p><a class="btn btn-warning" href="<?php echo site_url('/notes/'.$note['slug']); ?>
+                            <p><a class="btn btn-warning" href="<?php 
+                            echo site_url('/notes/'.$note['slug']); ?>
                             ">Read more</a></p> 
                             <hr>
                         </div>
@@ -45,7 +49,8 @@
                 </div>
             <?php endforeach; ?>
                 <div class="pagination-links">
-                    <?php echo $this->pagination->create_links();?> <!-- this shows pagination on the buttom 
+                    <?php echo $this->pagination->create_links();?> <!-- this shows 
+                    pagination on the buttom 
                     of page -->
                 </div>
     </div>
