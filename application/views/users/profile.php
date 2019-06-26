@@ -44,7 +44,7 @@
                                 <div class="col-sm-4 col-md-4 text-danger card-footer">
                                 <tr>
                                     <th class="text"><center><strong><u>Total number of 
-                                    tasks:</u></strong><center></th><br /> <br />
+                                    tasks added:</u></strong><center></th><br /> <br />
                                 </tr>
                                 <?php if( $task > 0)                                
                                     {
