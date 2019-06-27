@@ -12,8 +12,9 @@
             }
             $data['title'] = "Your's today's perform list ";
             $data['todos'] = $this->todo_model->get_todo();
+            $data['pinn'] = $this->note_model->get_pin();
             //load following assets
-            $this->load->view('includes/header');
+            $this->load->view('includes/header', $data);
             $this->load->view('todo/index', $data);
             $this->load->view('includes/footer');
         } // end of function
@@ -31,7 +32,8 @@
             $this->form_validation->set_rules('date','Tododate', 'required');  
             if($this->form_validation->run() === FALSE)
             {
-                $this->load->view('includes/header');
+                $data['pinn'] = $this->note_model->get_pin();
+                $this->load->view('includes/header',$data);
                 $this->load->view('todo/add', $data);
                 $this->load->view('includes/footer');
             }
@@ -70,9 +72,10 @@
             }
             $data['title'] = "Completed tasks ";
             $data['todos'] = $this->todo_model->get_todo_c();
+            $data['pinn'] = $this->note_model->get_pin();
 
             //load following assets
-            $this->load->view('includes/header');
+            $this->load->view('includes/header', $data);
             $this->load->view('todo/view', $data);
             $this->load->view('includes/footer');            
         } // end of fucntion

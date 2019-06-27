@@ -11,7 +11,8 @@
             {
                 redirect('users/login');
             }
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $data['title'] = 'Profile';
             $id = $this->session->userdata('user_id');
             $data['row'] = $this->user_model->count_rows($id);

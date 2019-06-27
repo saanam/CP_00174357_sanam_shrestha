@@ -11,9 +11,10 @@
                 redirect('users/login');
             }
             $data['title'] = "Notebooks";
+            $data['pinn'] = $this->note_model->get_pin();
             $data['notebooks'] = $this->notebook_model->get_notebooks();
             //load following assets
-            $this->load->view('includes/header');
+            $this->load->view('includes/header', $data);
             $this->load->view('notebooks/index', $data);
             $this->load->view('includes/footer');
         } // end of function
@@ -30,7 +31,8 @@
             $this->form_validation->set_rules('name','Name', 'required');
             if($this->form_validation->run() === FALSE)
             {
-                $this->load->view('includes/header');
+                $data['pinn'] = $this->note_model->get_pin();
+                $this->load->view('includes/header', $data);
                 $this->load->view('notebooks/add', $data);
                 $this->load->view('includes/footer');
             }
@@ -51,7 +53,8 @@
             //load following assets
             $data['notify'] = $this->todo_model->notify_tasks();
             $data['notes'] = $this->note_model->get_notes_by_notebook($notebookid);
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('notes/index', $data);
             $this->load->view('includes/footer');
         } // end of function

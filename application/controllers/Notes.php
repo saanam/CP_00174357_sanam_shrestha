@@ -25,7 +25,8 @@
             $data['notify'] = $this->todo_model->notify_tasks();
             $data['notes'] = $this->note_model->get_notes(FALSE,
              $config['per_page'], $offset);
-            $this->load->view('includes/header');
+             $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('notes/index', $data);
             $this->load->view('includes/footer');
             
@@ -46,7 +47,8 @@
                 show_404();
             }
             $data['notename'] = $data['note']['notename'];
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('notes/view', $data);
             $this->load->view('includes/footer');
         }
@@ -68,7 +70,8 @@
             
             if($this->form_validation->run() === FALSE)
             {
-                $this->load->view('includes/header');
+                $data['pinn'] = $this->note_model->get_pin();
+                $this->load->view('includes/header', $data);
                 $this->load->view('notes/add', $data);
                 $this->load->view('includes/footer');
             }
@@ -149,7 +152,8 @@
                 show_404();
             }
             $data['title'] = 'Edit Note';
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('notes/edit', $data);
             $this->load->view('includes/footer');
         } // end of function

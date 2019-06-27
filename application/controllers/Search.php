@@ -22,7 +22,8 @@
         public function note_search()
         {
             $data['title'] = 'Search notes (Showing relavent data)';
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $key = $this->input->post('search');
             $data['notes'] = $this->search_model->search_note($key);
             $this->load->view('search/view', $data);

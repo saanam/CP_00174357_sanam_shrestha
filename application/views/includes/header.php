@@ -157,9 +157,13 @@
 <!--start of container-fluid class-->
 <div class = "wrapper">
 
-
+<?php if($this->session->userdata('logged_in')): ?> 
   <nav id="sidebar">
     <div class="sidebar-header">
-              <h3>Pinned notes</h3>
-          </div>
+              <h3>Pinned notes</h3><br />
+              <?php foreach((array) $pinn as $pin): ?>
+                <li><a href=""><?php echo $pin['notename'];?></a><br /><br />
+              <?php endforeach; ?>
+    </div>
   </nav>
+  <?php endif; ?>

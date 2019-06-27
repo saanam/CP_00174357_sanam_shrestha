@@ -12,7 +12,8 @@
             }            
             $data['title'] = 'Trash';
             $data['trash'] = $this->trash_model->view_trash();
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('notes/trash', $data);
             $this->load->view('includes/footer');
 

@@ -18,7 +18,8 @@
             {
                 redirect('users/login');
             }
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             //this methode will return data which have been stored under $data variable
             $data['note_data'] = $this->export_csv_model->fetch_data(); 
             $this->load->view('export_csv', $data);

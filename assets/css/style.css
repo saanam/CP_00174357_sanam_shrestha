@@ -150,6 +150,7 @@ a.pagination-link
     width: 17%;
     position: fixed;
     padding-top: 3%;
+    padding-left: 10px;
     left: 0;
     height: 100%;
     z-index: 999;

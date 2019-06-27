@@ -20,11 +20,17 @@
       <!--opens form-->
       <?php echo form_open('notes/update'); ?>
           <input type="Hidden" name="id" value="<?php echo $note['noteid'];?>">
-      <div class="form-group">
+      <div class="row">
+        <div class="form-group">
           <label class="text">Note name</label>
           <!--here note name is displayed-->
           <input type="text" class="form-control" name="notename" placeholder="Add Title" value="<?php echo $note['notename']; ?>" >
         </div>
+        <div class="form-group col-md-3 ">
+            <label class="text">Pin note?</label><br />
+          <input type="radio" name="pin" value="2" >Yes
+          <input type="radio" name="pin" value="1"checked>No<br>
+        </div></div>
         <div class="form-group">
           <label class="text">Note detail: </label>
           <!--here note detail is displayed-->

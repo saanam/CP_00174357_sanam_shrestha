@@ -54,7 +54,7 @@
            // start of if condition
             if($this->form_validation->run() === FALSE)
             {
-                $this->load->view('includes/header');
+                $this->load->view('includes/header', $data);
                 $this->load->view('users/login', $data);
                 $this->load->view('includes/footer');
             }
@@ -141,7 +141,8 @@
             }
             $data['user']= $this->user_model->get_user();
             $data['title'] = 'Edit Profile';
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('users/edit_profile', $data);
             $this->load->view('includes/footer');
         } // end of fucnton
@@ -156,7 +157,8 @@
             }
             $data['user']= $this->user_model->get_user();
             $data['title'] = 'Change password';
-            $this->load->view('includes/header');
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
             $this->load->view('users/change_password', $data);
             $this->load->view('includes/footer');
         } // end of fucntion
@@ -249,7 +251,8 @@
             //setting page title
            $data['title'] =  'Loggin history';
            $data['login_history'] = $this->user_model->login_history_view();
-           $this->load->view('includes/header');
+           $data['pinn'] = $this->note_model->get_pin();
+           $this->load->view('includes/header', $data);
            $this->load->view('users/history', $data);
            $this->load->view('includes/footer');
         } // end of fucntion

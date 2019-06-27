@@ -37,6 +37,7 @@
             //array containing many data
             $data = array(
                 'notename' => $this->input->post('notename'),
+                'pin' => $this->input->post('pin'),
                 'slug' => $slug,
                 'notedetail' => $this->input->post('notedetail'),
                 'notebook_id' => $this->input->post('notebook_id'),
@@ -61,6 +62,7 @@
                 $slug = url_title($this->input->post('notename'));
                 $data = array(
                     'notename' => $this->input->post('notename'),
+                    'pin' => $this->input->post('pin'),
                     'slug' => $slug,
                     'notedetail' => $this->input->post('notedetail'),
                     'notebook_id' => $this->input->post('notebook_id')
@@ -87,6 +89,12 @@
                 $this->db->order_by('notes.noteid', 'DESC');
                 $this->db->join('notebooks', 'notebooks.notebookid = notes.notebook_id');
                 $query = $this->db->get_where('notes', array('notebook_id'=> $notebook_id));
+                return $query->result_array();
+            }
+
+            function get_pin()
+            {
+                $query = $this->db->query('SELECT * FROM notes WHERE user_id = '.$this->session->userdata('user_id').' AND pin = 2');
                 return $query->result_array();
             }
     }

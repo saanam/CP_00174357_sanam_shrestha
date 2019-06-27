@@ -19,10 +19,16 @@
   </strong></div>
 <!--opens form supporting images-->
 <?php echo form_open_multipart('notes/add'); ?>
-<div class="form-group">
+<div class="row">
+<div class="form-group col-md-9">
     <label class="text">Note name</label>
     <input type="text" class="form-control" name="notename" placeholder="Add Title">
   </div>
+  <div class="form-group col-md-3 ">
+  <label class="text">Pin note?</label><br />
+<input type="radio" name="pin" value="2" >Yes
+<input type="radio" name="pin" value="1"checked>No<br>
+</div></div>
   <div class="form-group">
     <label class="text">Note detail: </label>
     <textarea id="editor1" class="form-control" name="notedetail" placeholder="Add Body"></textarea>
