@@ -2,6 +2,16 @@
 <!--start of card section-->
 <div class="card card-4">
     <div class="card-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+
+        </div>
+    </nav>
         <div class="row">
                 <div class="col-md-3 form-group">
 

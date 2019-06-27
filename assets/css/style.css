@@ -141,10 +141,33 @@ a.pagination-link
     }
   }
 
-  .profile
-  {
+  .wrapper {
+    display: flex;
+    width: 100%;
+}
 
-  }
+#sidebar {
+    width: 17%;
+    position: fixed;
+    padding-top: 3%;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    transition: all 0.3s;
+}
 
-  
+#sidebar.active {
+    margin-left: -250px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+} 
   

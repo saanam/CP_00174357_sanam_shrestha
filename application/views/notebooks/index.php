@@ -2,6 +2,16 @@
 <!--this part presents cart section-->
 <div class="card card-4">
     <div class="card-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-info">
+                <i class="fas fa-align-left"></i>
+                <span>Toggle Sidebar</span>
+            </button>
+
+        </div>
+    </nav>
         <!--This part shows title of page-->
         <h2 class="text"><?= $title; ?></h2>
         <div class="group">
@@ -21,6 +31,7 @@
         </div>
     </div>
 </div>
+
 <!--end of card section-->
 <div class="background">
 
