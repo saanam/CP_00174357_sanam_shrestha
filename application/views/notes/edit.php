@@ -21,7 +21,7 @@
       <?php echo form_open('notes/update'); ?>
           <input type="Hidden" name="id" value="<?php echo $note['noteid'];?>">
       <div class="row">
-        <div class="form-group">
+        <div class="form-group col-md-9">
           <label class="text">Note name</label>
           <!--here note name is displayed-->
           <input type="text" class="form-control" name="notename" placeholder="Add Title" value="<?php echo $note['notename']; ?>" >

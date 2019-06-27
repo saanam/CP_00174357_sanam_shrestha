@@ -4,6 +4,7 @@
     <div class="card-body">
 <!--form tag openning-->
 <?php echo form_open('users/login'); ?>
+<?php if(!$this->session->userdata('logged_in')) : ?>
     <div class="row">
         <div class='col-md-4'>
 
@@ -28,6 +29,20 @@
     </div>
 <?php echo form_close(); ?>
 </div>
+</div><?php endif;?>
+<?php if($this->session->userdata('logged_in')) : ?>
+    <div class="show-info">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+            <h3><p class="text-danger">To login into different account you must logout from current account!!</P></h3>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+</div><?php endif; ?>
 </div>
 <!-- form tag closing-->
 <div class="background">

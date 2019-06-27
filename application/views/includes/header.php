@@ -160,9 +160,9 @@
 <?php if($this->session->userdata('logged_in')): ?> 
   <nav id="sidebar">
     <div class="sidebar-header">
-              <h3>Pinned notes</h3><br />
+              <h3><u>Pinned notes</u></h3><br />
               <?php foreach((array) $pinn as $pin): ?>
-                <li><a href=""><?php echo $pin['notename'];?></a><br /><br />
+                <li><a href="<?php echo site_url('/notes/'.$pin['slug']); ?>"><?php echo $pin['notename']; ?></a><br /><br />
               <?php endforeach; ?>
     </div>
   </nav>

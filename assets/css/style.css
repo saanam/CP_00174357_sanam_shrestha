@@ -98,7 +98,7 @@ a.pagination-link
 
 .text
 {
-    color: rgba(170, 48, 11, 0.986);
+    color: black(170, 48, 11, 0.986);
     margin: 4px;
     padding-bottom: 10px;
 
@@ -171,3 +171,23 @@ a.pagination-link
         margin-left: 0;
     }
 } 
+
+a:link {
+    color: black;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+  }
+  
+  /* selected link */
+  a:active {
+    color: black;
+  } 
+

@@ -19,11 +19,11 @@
                 <div class="row">
                     <div class="col-sm-3">
                     <!--add tasks button-->
-                        <a class="btn btn-primary" href="<?php echo base_url(); ?>todo/add">Add task</a>
+                        <a class="btn btn-success" href="<?php echo base_url(); ?>todo/add">Add task</a>
                         <br />
                         <br />
                         <!--ciew completed task button-->
-                        <a class="btn btn-primary" href="<?php echo base_url(); ?>todo/view">View completed tasks</a>
+                        <a class="btn btn-success" href="<?php echo base_url(); ?>todo/view">Task completed</a>
                     </div>
 
                         <div class="col-sm-9 card-footer">

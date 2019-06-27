@@ -38,8 +38,8 @@
                                 <input type="text" class="form-control" name="todoname" placeholder="Task name">
 
                                 <label class="text control-label" for="date">Date</label>
-                                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-
+                                <input class="form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text"/>
+                                <br />
                                 <button type="submit" class="btn btn-warning">Add</button>
                             </div>
                             <div class="col-md-3 form-group">

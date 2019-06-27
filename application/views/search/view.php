@@ -22,7 +22,7 @@
 
                                     <!--here note name is displayed--> 
                                     <tr>
-                                        <td><?php echo $row->notename; ?></td>
+                                        <td><a href="<?php echo site_url('/notes/'.$row->slug); ?>"><?php echo $row->notename; ?></td>
                                                                               
                                     </tr>
                         </div><?php endforeach; ?>

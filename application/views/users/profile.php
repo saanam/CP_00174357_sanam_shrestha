@@ -20,15 +20,15 @@
             </div></center></span></header>
             <div class="row">
                 <div class="col-sm-4 col-md-4 card-footer"><center>
-                    <a class="btn btn-warning" href="<?php echo base_url(); ?>users/edit_profile">Edit 
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>users/edit_profile">Edit 
                     profile</a><br /><br />
-                    <a class="btn btn-warning" href="<?php echo base_url(); ?>users/change_password">Change 
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>users/change_password">Change 
                     password</a><br /><br />
-                    <a class="btn btn-warning" href="<?php echo base_url(); ?>users/login_history">Login 
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>users/login_history">Login 
                     log</a><br /><br />
-                    <a class="btn btn-warning" href="<?php echo base_url(); ?>export_csv/index">Export 
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>export_csv/index">Export 
                     data</a><br /><br />
-                    <a class="btn btn-warning" href="<?php echo base_url(); ?>profile/trash">
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>profile/trash">
                     Trash</a><br /><br />
                     </center>
                 </div>

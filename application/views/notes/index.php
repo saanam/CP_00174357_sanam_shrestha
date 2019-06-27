@@ -21,16 +21,16 @@
         <div class="col-md-6">
             <?php if($notify > 0)
             {?>
-               <a href="<?php echo base_url(); ?>todo" h4 
+               <a href="<?php echo base_url(); ?>todo"> <h6 
                class=" notify text"<center><strong><?php 
                echo 'YOU GOT ';?><?php echo $notify; ?><?php 
                echo ' TASK(S) TO COMPLETE!'; ?>
-               </a></strong></center></h4> 
+               </a></strong></center></h6> 
            <?php } 
             else{?>
-                <h4 class=" notify text"<center><?php 
+                <h6 class=" notify text"<center><?php 
                 echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
-                </strong></center></h4> 
+                </strong></center></h6> 
         </div>
         </div>
             <?php foreach((array) $notes as $note) : ?>
@@ -55,7 +55,7 @@
                             <br><br>
                             <!-- this button leads to full note page of that particular
                              note-->
-                            <p><a class="btn btn-warning" href="<?php 
+                            <p><a class="btn btn-success" href="<?php 
                             echo site_url('/notes/'.$note['slug']); ?>
                             ">Read more</a></p> 
                             <hr>

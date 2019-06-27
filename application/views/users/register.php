@@ -3,6 +3,7 @@
 <div class="card card-4">
     <div class="card-body">
         <!--sends any error to validation_errors-->
+        <?php if(!$this->session->userdata('logged_in')) : ?>
         <div class="text text-center text-danger card-footer"><?php echo validation_errors(); ?>
             <?php echo 'Note: Password should be at least 8
                     characters in length and should include 
@@ -49,7 +50,20 @@
 
             </div>    
         </div>
-    </div>
+</div><?php endif; ?>
+    <?php if($this->session->userdata('logged_in')) : ?>
+    <div class="show-info">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+            <h3><p class="text-danger">To create new account you must logout from current account!!</P></h3>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+</div><?php endif; ?>
 </div>
 <?php echo form_close();?>
 <!--form tag closing-->
