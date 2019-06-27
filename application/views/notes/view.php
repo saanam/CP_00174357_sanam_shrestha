@@ -2,16 +2,18 @@
 <!--start of card section-->
 <div class="card card-4">
     <div class="card-body">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+        <div class="toggel">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
 
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
-                <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
-            </button>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Pinned Notes</span>
+                    </button>
 
+                </div>
+            </nav>
         </div>
-    </nav>
     <!--this is note name-->
         <h2 class="text text-underline"><strong><?php echo $note['notename']; ?></strong></h2>
             <small class ="note-date"> Saved on:<?php echo $note['notecreateddot']; ?></small><br>

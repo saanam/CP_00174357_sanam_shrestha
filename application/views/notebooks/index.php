@@ -2,12 +2,12 @@
 <!--this part presents cart section-->
 <div class="card card-4">
     <div class="card-body">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
 
-            <button type="button" id="sidebarCollapse" class="btn btn-info">
+            <button type="button" id="sidebarCollapse" class="btn">
                 <i class="fas fa-align-left"></i>
-                <span>Toggle Sidebar</span>
+                <span>Toggle Pinned Notes</span>
             </button>
 
         </div>

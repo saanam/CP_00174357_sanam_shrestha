@@ -98,12 +98,9 @@
       </div>
 </nav>
 <!--end of nav part-->
-
-<!--start of container-fluid class-->
-<div class = "wrapper">
-
+<div class = "text text-center">
   <!-- flash message-->
-    <center>
+    
     <?php if($this->session->flashdata('user_registered')): ?>
       <?php echo '<p class="alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
     <?php endif; ?>
@@ -156,7 +153,10 @@
       <?php echo '<p class="alert-danger">'.$this->session->flashdata('old_passwordwrong').'</p>'; ?>
     <?php endif; ?>
 
-  </center>
+</div>
+<!--start of container-fluid class-->
+<div class = "wrapper">
+
 
   <nav id="sidebar">
     <div class="sidebar-header">
