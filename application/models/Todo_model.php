@@ -66,4 +66,19 @@
                 $this->db->from('todo');
                 return $this->db->count_all_results();
         }
+
+        function get_todo7()
+        {
+            $id= array(
+                'user_id' => $this->session->userdata('user_id'),
+                'status' => 'incompleted',
+                'tododate' => date('y-m-d')
+            );
+            $this->db->select('*');
+            $this->db->where('tododate BETWEEN DATE_ADD(CURDATE(), INTERVAL -7 DAY) AND CURDATE()');
+            $this->db->where('user_id', $this->session->userdata('user_id'));
+            $this->db->where('status', 'incompleted');
+            $result = $this->db->get('todo');
+                return $result->result_array();
+        }
     } //end of class

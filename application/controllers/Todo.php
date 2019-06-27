@@ -12,6 +12,7 @@
             }
             $data['title'] = "Your's today's perform list ";
             $data['todos'] = $this->todo_model->get_todo();
+            $data['tos'] = $this->todo_model->get_todo7();
             $data['pinn'] = $this->note_model->get_pin();
             //load following assets
             $this->load->view('includes/header', $data);
