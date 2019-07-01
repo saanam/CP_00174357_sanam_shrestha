@@ -22,8 +22,7 @@
             || !$number || !$specialChars || strlen($password) < 8)
             {
                 //load following assets if above condition match
-                $data['pinn'] = $this->note_model->get_pin();
-                $this->load->view('includes/header', $data);
+                $this->load->view('includes/header');
                 $this->load->view('users/register', $data);
                 $this->load->view('includes/footer');
             }
@@ -47,7 +46,7 @@
         {
             //setting page title
            $data['title'] =  'Sign In';
-            $data['pinn'] = $this->note_model->get_pin();
+
            // setting validation on email and password
            $this->form_validation->set_rules('email', 'Email', 'required');
            $this->form_validation->set_rules('password', 'Password', 'required');
