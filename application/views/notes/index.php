@@ -32,7 +32,7 @@
                 echo 'ALL TASKS ARE COMPLETE. ADD NEW TASK NOW!' ;}?>
                 </strong></center></h6> 
         </div>
-        </div>
+        </div><br />
             <?php foreach((array) $notes as $note) : ?>
             <!-- here name of note is displayed-->
                 <h3 class="text"><?php echo $note['notename']; ?></h3> 
