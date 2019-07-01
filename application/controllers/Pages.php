@@ -3,15 +3,16 @@
     class Pages extends CI_Controller
     {
         //function that calls model function when called
-        public function view($page = 'home')
+        public function view()
         {
-            if(!file_exists(APPPATH.'views/pages/'.$page.'.php'))
+            if(!file_exists(APPPATH.'views/users/login.php'))
             {
                 show_404();
             }
-            $data['title'] = ucfirst($page);
-            $this->load->view('includes/header');
-            $this->load->view('pages/'.$page,$data);
+            $data['title'] = 'Login';
+            $data['pinn'] = $this->note_model->get_pin();
+            $this->load->view('includes/header', $data);
+            $this->load->view('users/login',$data);
             $this->load->view('includes/footer');
         }
     } // end of fucntion
