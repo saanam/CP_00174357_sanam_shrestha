@@ -49,6 +49,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['testing/(:any)'] = 'testing/view/$1';
+$route['testing'] = 'testing/index';
+
 $route['notes/index'] = 'notes/index';
 $route['notes/note_search'] = 'search/note_search';
 $route['notes/add'] = 'notes/add';
