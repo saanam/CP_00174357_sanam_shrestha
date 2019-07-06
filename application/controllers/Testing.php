@@ -15,15 +15,15 @@
             $test_name = 'Array check';
             $test_note = 'This is a test for checking array input and output';
 
-            $test1 = $this->check_array();
-            $expected_result1 = 'is_array';
-            $test_name1 = 'Array check';
-            $test_note1 = 'This is a test for checking array input and output';
+            $test1 = $this->pass_login('asd@asd', 'Sanamasd@12345');
+            $expected_result1 = True;
+            $test_name1 = 'Login Test';
+            $test_note1 = 'This is a test for pass login';
 
-            $test2 = $this->check_array();
-            $expected_result2 = 'is_array';
-            $test_name2 = 'Array check';
-            $test_note2 = 'This is a test for checking array input and output';
+            $test2 = $this->fail_login('asdasd@asd', 'Sanamasd@12345');
+            $expected_result2 = True;
+            $test_name2 = 'Login Test';
+            $test_note2 = 'This is a test for fail login';
 
             $test3 = $this->check_array();
             $expected_result3 = 'is_array';
@@ -46,5 +46,15 @@
                 'password' => 'password');
                 return $ut;  
         }
+        
+        function pass_login($email, $password)
+        {
+            return $this->user_model->login($email, md5($password));
+        }
+
+        function fail_login($email, $password)
+        {
+            return $this->user_model->login($email, md5($password));
+        }        
     }
 ?>
