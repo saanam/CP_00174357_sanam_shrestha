@@ -83,10 +83,7 @@
                     <a class="nav-link" href="<?php echo base_url(); ?>todo">Tasks<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?php echo base_url(); ?>notebooks">Notebooks<span class="sr-only">(current)</span></a> 
                     <a class="nav-link" href="<?php echo base_url(); ?>notes">Notes<span class="sr-only">(current)</span></a>
-                    <form class="form-inline my-2 my-lg-0" action="<?php echo base_url(); ?>notes/note_search">
-                        
-                        <button class="btn btn-outline-success my-2 my-sm-0" name="search" type="submit">View All Notes</button>
-                    </form> 
+                    <a class="nav-link" href="<?php echo base_url(); ?>notes/note_search">View All Notes<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?php echo base_url(); ?>notebooks/add">Add Notebook<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?php echo base_url(); ?>notes/add">Add Note<span class="sr-only">(current)</span></a>                    
                     <a class="nav-link" href="<?php echo base_url(); ?>profile">Profile<span class="sr-only">(current)</span></a>
