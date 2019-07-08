@@ -151,6 +151,10 @@
       <?php echo '<p class="alert-danger">'.$this->session->flashdata('old_passwordwrong').'</p>'; ?>
     <?php endif; ?>
 
+    <?php if($this->session->flashdata('task_added')): ?>
+      <?php echo '<p class="alert-success">'.$this->session->flashdata('task_added').'</p>'; ?>
+    <?php endif; ?>    
+
 </div>
 <!--start of container-fluid class-->
 <div class = "wrapper">

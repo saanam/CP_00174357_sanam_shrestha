@@ -42,7 +42,7 @@
                 $this->todo_model->add_todo();
 
                 //set message
-                $this->session->set_flashdata('notebook_added', 'Notebook has been added.');
+                $this->session->set_flashdata('task_added', 'Task has been added.');
 
                 redirect('todo');
             }           
