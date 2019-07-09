@@ -44,4 +44,8 @@
             echo $try6;
         } endif; ?>
 
+        <?php if($try7):
+        {
+            echo $try7;
+        } endif; ?>
     </div>

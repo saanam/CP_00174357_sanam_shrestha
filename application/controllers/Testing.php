@@ -45,6 +45,11 @@
             $test_name6 = 'count all tasks';
             $test_note6 = 'This is a test for counting tasks';
 
+            $test7 = $this->delete_notebook('1');
+            $expected_result7 = True;
+            $test_name7 = 'Delete notebook';
+            $test_note7 = 'This is a pass test for deleting notebooks';
+
             $try['try'] = $this->unit->run($test, $expected_result, $test_name, $test_note);
             $try['try1'] = $this->unit->run($test1, $expected_result1, $test_name1, $test_note1);
             $try['try2'] = $this->unit->run($test2, $expected_result2, $test_name2, $test_note2);
@@ -52,6 +57,7 @@
             $try['try4'] = $this->unit->run($test4, $expected_result4, $test_name4, $test_note4);  
             $try['try5'] = $this->unit->run($test5, $expected_result5, $test_name5, $test_note5); 
             $try['try6'] = $this->unit->run($test6, $expected_result6, $test_name6, $test_note6);         
+            $try['try7'] = $this->unit->run($test7, $expected_result7, $test_name7, $test_note7);  
             $this->load->view('testing/index',$try);
             $this->load->view('includes/footer');
         }
@@ -88,6 +94,11 @@
         function count_tasks($id)
         {
             return $this->user_model->count_ctasks($id);
+        }
+
+        function delete_notebook($notebook_id)
+        {
+            return $this->notebook_model->delete_notebook($notebook_id);
         }
     }
 ?>
