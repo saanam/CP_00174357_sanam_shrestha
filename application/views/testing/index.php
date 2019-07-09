@@ -14,19 +14,34 @@
             echo $try;
         } endif; ?>
 
-<?php if($try1):
+        <?php if($try1):
         {
             echo $try1;
         } endif; ?>
 
-                <?php if($try2):
+        <?php if($try2):
         {
             echo $try2;
         } endif; ?>
 
-                <?php if($try3):
+        <?php if($try3):
         {
             echo $try3;
+        } endif; ?>
+
+        <?php if($try4):
+        {
+            echo $try4;
+        } endif; ?>
+
+        <?php if($try5):
+        {
+            echo $try5;
+        } endif; ?>
+
+        <?php if($try6):
+        {
+            echo $try6;
         } endif; ?>
 
     </div>
